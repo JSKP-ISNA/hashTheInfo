@@ -1,0 +1,12 @@
+src/
+ └─ main/
+     ├─ java/
+     │   └─ com/example/authmodule/
+     │        ├─ AuthModuleApplication.java
+     │        ├─ model/User.java
+     │        ├─ repository/UserRepository.java
+     │        ├─ service/AuthService.java
+     │        └─ controller/AuthController.java
+     └─ resources/
+         └─ application.properties
+pom.xml
