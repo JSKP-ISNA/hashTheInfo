@@ -1,12 +1,8 @@
-package com.example.authmodule;
+// Legacy placeholder removed. The application entrypoint is `com.example.hashtheinfo.HashTheInfoApplication`.
+// This file was neutralized to avoid duplicate/main-class and package mismatches.
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+package com.auth; // keep a simple package to match folder, no executable class here
 
-@SpringBootApplication
 public class AuthModuleApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(AuthModuleApplication.class, args);
-        System.out.println("✅ Authentication Module Running...");
-    }
+    // intentionally left blank
 }

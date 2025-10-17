@@ -3,6 +3,7 @@ D:\Projects\hashTheInfo\src\main\java\com\example\hashtheinfo\user\service\UserS
 D:\Projects\hashTheInfo\src\main\java\com\example\hashtheinfo\ui\controller\UIController.java
 D:\Projects\hashTheInfo\src\main\java\com\auth\service\AuthService.java
 D:\Projects\hashTheInfo\src\main\java\com\example\hashtheinfo\user\repository\UserRepository.java
+D:\Projects\hashTheInfo\src\main\java\com\example\hashtheinfo\auth\controller\AuthController.java
 D:\Projects\hashTheInfo\src\main\java\com\auth\controller\AuthController.java
 D:\Projects\hashTheInfo\src\main\java\com\example\hashtheinfo\security\filter\JwtRequestFilter.java
 D:\Projects\hashTheInfo\src\main\java\com\example\hashtheinfo\HashTheInfoApplication.java
