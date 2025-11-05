@@ -1,11 +1,42 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <title>Welcome | HashTheInfo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        body {
+            margin: 0; padding: 0;
+            background: radial-gradient(circle at top, #0a0e27, #0e122d);
+            font-family: 'Poppins', sans-serif; color: white;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: #141a36; padding: 50px; border-radius: 20px; text-align: center;
+            width: 420px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        h1 { color: #ffcf33; font-size: 24px; margin-top:0; }
+        h3 { font-weight: 400; color: #c9c9c9; }
+        .btn {
+            background: #ffd000; border: none; padding: 12px 30px; border-radius: 8px;
+            font-weight: 600; color: #000; cursor: pointer; transition: 0.3s; margin-top: 20px;
+        }
+        .btn:hover { background: #ffb700; }
+        .success-msg { color: #4be38a; font-size: 18px; margin-bottom: 15px; font-weight: 600; }
+    </style>
 </head>
 <body>
-<h1>Welcome</h1>
-<p>This is the home page.</p>
+    <div class="card">
+        <div class="success-msg" th:if="${loginMessage}" th:text="${loginMessage}">✅ Login Successful!</div>
+        <h1>Welcome, <span th:text="${username}">User</span> 👋</h1>
+        <h3>You’ve successfully logged into <b>HashTheInfo SecureApp</b>.</h3>
+
+        <form th:action="@{/logout}" method="post">
+            <!-- CSRF for logout -->
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <button type="submit" class="btn">Logout</button>
+        </form>
+    </div>
 </body>
 </html>

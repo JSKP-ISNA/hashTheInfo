@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Success</title>
+  <style>
+    body { background:#081020; color:#fff; font-family:Arial, sans-serif; text-align:center; padding:80px; margin:0;}
+    .box { display:inline-block; padding:28px; border-radius:12px; background:#0f1724; }
+    a { color:#ffd247; text-decoration:none; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🎉 Login Successful</h2>
+    <p>Welcome, <strong th:text="${username}">user</strong>!</p>
+    <p><a th:href="@{/home}">Go to Home</a> | 
+       <form th:action="@{/logout}" method="post" style="display:inline;">
+         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+         <button type="submit" style="background:none;border:none;color:#ffd247;cursor:pointer;font-weight:600;">Logout</button>
+       </form>
+    </p>
+  </div>
+</body>
+</html>
